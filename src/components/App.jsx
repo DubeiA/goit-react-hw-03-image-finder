@@ -2,6 +2,11 @@ import React, { Component } from 'react'
 
 
 export default class App extends Component {
+  state = {
+    picture: null
+  };
+
+
   render() {
     return (
       <div>
