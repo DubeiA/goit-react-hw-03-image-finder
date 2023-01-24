@@ -1,8 +1,5 @@
-
-// const URL = "https://pixabay.com/api/?q=cat&page=1&key=31092155-fdd6914219543248b658a821f&image_type=photo&orientation=horizontal&per_page=12"
-
-
 import React, { Component } from 'react'
+import css from '../Searchbar/Searchbar.module.css'
 
 export default class Searchbar extends Component {
     state = { 
@@ -29,16 +26,16 @@ export default class Searchbar extends Component {
 
   render() {
     return (
-        <header className="searchbar">
+        <header className={css.Searchbar}>
 
-            <form className="form" onSubmit={this.submitForm}>
+            <form className={css.SearchForm} onSubmit={this.submitForm}>
                 
-        <button type="submit" className="button">
-            <span className="button-label">Search</span>
+        <button type="submit" className={css.SearchButton}>
+            <span className={css.SearchButtonLabel}>Search</span>
         </button>
 
         <input
-            className="input"
+            className={css.SearchFormInput}
             type="text"
             autoComplete="off"
             autoFocus
