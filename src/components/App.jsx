@@ -76,10 +76,7 @@ export class App extends Component {
     getIndex = (index) => {
   this.setState({index})
   }
-
-  // onClick={this.toggleModal}
-  // getIndex={this.getIndex}
-  // index={index}
+  
 
   getSearchSubmit = (query) => {
     this.setState({ query })

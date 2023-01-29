@@ -5,9 +5,6 @@ import PropTypes from 'prop-types';
 
 export class ImageGalleryItem extends Component {
 
-  handleImageClick = (index) => {
-    this.props.getIndex(index)
-  }
 
   render() {
     const { image, tags, onClick, index } = this.props;
