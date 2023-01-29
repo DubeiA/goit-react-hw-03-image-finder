@@ -15,3 +15,8 @@
   transform: scale(1.03);
   cursor: zoom-in;
 }
+
+.image {
+  height: 260px;
+  width: 100%;
+}

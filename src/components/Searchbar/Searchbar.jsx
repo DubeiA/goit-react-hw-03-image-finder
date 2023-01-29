@@ -3,7 +3,8 @@ import css from '../Searchbar/Searchbar.module.css'
 
 export default class Searchbar extends Component {
     state = { 
-        searchName: ''
+        searchName: '',
+       
     }
 
 
