@@ -7,6 +7,8 @@ import { Button } from './Button/Button';
 import { Modal } from 'components/Modal/Modal';
 import * as PickAPI from './Services/Services';
 
+import css from './ImageGallery/ImageGallery.module.css';
+
 export class App extends Component {
   state = {
     query: '',
@@ -65,14 +67,7 @@ export class App extends Component {
     const { loading, error, images, page, isOpenModal, index } = this.state;
 
     return (
-      <div
-        style={{
-          display: 'grid',
-          gridTemplateColumns: '1fr',
-          gridGap: 16,
-          paddingBottom: 24,
-        }}
-      >
+      <div className={css.container}>
         <Searchbar onSubmit={this.getSearchSubmit} />
         {error && <div>{error.message}</div>}
         {loading && <Loader />}
