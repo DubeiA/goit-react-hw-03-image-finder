@@ -5,7 +5,7 @@ import { ImageGalleryItem } from './ImageGalleryItem/ImageGalleryItem';
 import { Loader } from './Loader/Loader';
 import { Button } from './Button/Button';
 import { Modal } from 'components/Modal/Modal';
-import * as PickAPI from './Services/Services';
+import * as PickAPI from './services';
 
 import css from './ImageGallery/ImageGallery.module.css';
 
@@ -98,52 +98,3 @@ export class App extends Component {
     );
   }
 }
-
-// import React, { Component } from 'react'
-// import Searchbar from './Searchbar/Searchbar';
-// import { ImageGallery } from './ImageGallery/ImageGallery';
-// import { Button } from './Button/Button';
-// // import ImageGalleryItem from './ImageGalleryItem/ImageGalleryItem';
-
-// export class App extends Component {
-//   state = {
-//     searchText: '',
-//     pageNumber: 1,
-//   };
-
-//   getSearchSubmit = searchText => {
-//     this.setState({ searchText })
-//   };
-
-//   componentDidUpdate = (prevProps, prevState) => {
-//     if (prevState.searchText !== this.state.searchText) {
-//       this.setState({pageNumber: 1})
-//     }
-//   }
-
-//   loadMore = () => {
-//     // event.preventDefault()
-
-//         this.setState(prevState => ({
-//       pageNumber: prevState.pageNumber + 1
-
-//     }))
-
-//   }
-
-//   render() {
-//     return (
-//       <div style={{
-//         display: 'grid',
-//         gridTemplateColumns: '1fr',
-//         gridGap: 16,
-//         paddingBottom: 24,
-//       }}>
-//         <Searchbar onSubmit={this.getSearchSubmit} />
-//         <ImageGallery pictures={this.state.searchText} page={this.state.pageNumber} />
-//         {this.state.searchText && <Button onClick={this.loadMore} pageNumber={this.state.pageNumber} /> }
-
-//       </div>
-//     )
-//   }
-// }
